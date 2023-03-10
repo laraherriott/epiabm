@@ -14,6 +14,7 @@ from pyEpiabm.utility import InverseCdf
 
 class StateTransitionMatrix:
     """Class to generate and edit the state transition matrix
+
     """
     def __init__(self, coefficients: typing.Dict[str, typing.List[float]],
                  use_ages=False):
@@ -25,6 +26,7 @@ class StateTransitionMatrix:
             Dictionary of age-dependent lists for matrix coefficients
         use_ages : bool
             Whether to include age dependant lists in matrix
+
         """
         self.matrix = self.create_state_transition_matrix(coefficients)
         self.age_dependent = use_ages
@@ -146,6 +148,7 @@ class StateTransitionMatrix:
 
 class TransitionTimeMatrix:
     """Class to generate the matrix with transition times
+
     """
     def __init__(self):
         """Initialises the transition time matrix the same way as for the

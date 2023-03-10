@@ -4,6 +4,7 @@ from pyEpiabm.core import Population
 
 class NewCasesWriter(_CsvWriter):
     """ Writer for collecting number of daily new cases
+
     """
 
     def __init__(self, folder: str):
@@ -13,6 +14,7 @@ class NewCasesWriter(_CsvWriter):
         ----------
         folder : str
             Absolute path to folder to store results
+
         """
         super().__init__(
             folder, 'new_cases.csv',
@@ -28,6 +30,7 @@ class NewCasesWriter(_CsvWriter):
             Current simulation time
         population : Population
             Population to record
+
         """
         for cell in population.cells:
             new_cases = 0

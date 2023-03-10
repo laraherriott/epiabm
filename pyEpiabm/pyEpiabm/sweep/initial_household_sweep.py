@@ -17,12 +17,13 @@ class InitialHouseholdSweep(AbstractSweep):
     model as CovidSim. For a discription of the analagous function
     in CovidSim see
     https://github.com/SABS-R3-Epidemiology/epiabm/wiki/Overview-of-the-Ferguson-Model.
+
     """
 
     def __init__(self):
         """Call in variables from the parameters file.
-        """
 
+        """
         self.use_ages = Parameters.instance().use_ages
         self.household_size_distribution \
             = Parameters.instance().household_size_distribution
@@ -40,6 +41,7 @@ class InitialHouseholdSweep(AbstractSweep):
         ----------
         Population: Population
             Instance of Population class
+
         """
 
         for cell in population.cells:
@@ -227,7 +229,7 @@ class InitialHouseholdSweep(AbstractSweep):
                     break
 
     def calc_number_of_children(self, household_size: int):
-        """ Method that calculates the amount of children in
+        """Method that calculates the amount of children in
         a household of three or more people.
 
         Parameters
@@ -285,7 +287,7 @@ class InitialHouseholdSweep(AbstractSweep):
         return num_childs
 
     def three_or_more_person_household_ages(self, people: list):
-        """ Method that assigns ages to the people
+        """Method that assigns ages to the people
         in a three person or larger sized household.
         The number of children is first calculated, this then decides which
         set of conditions the people's ages should satisfy, e.g. if they
@@ -420,6 +422,7 @@ class InitialHouseholdSweep(AbstractSweep):
         """Given a population structure, sorts the people into households
         of required size and if required loops over all people and assigns
         them an age dependant on their household size.
+
         """
 
         if all([len(microcell.households) == 0

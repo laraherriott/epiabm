@@ -15,6 +15,7 @@ class AgeStratifiedNewCasesWriter(_CsvWriter):
         ----------
         folder : str
             Absolute path to folder to store results
+
         """
         super().__init__(
             folder, 'age_stratified_new_cases.csv',
@@ -30,6 +31,7 @@ class AgeStratifiedNewCasesWriter(_CsvWriter):
             Current simulation time
         population : Population
             Population to record
+
         """
         for cell in population.cells:
             new_cases = {}

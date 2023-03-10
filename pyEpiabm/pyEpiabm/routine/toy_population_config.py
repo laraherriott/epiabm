@@ -16,8 +16,9 @@ from .abstract_population_config import AbstractPopulationFactory
 
 
 class ToyPopulationFactory(AbstractPopulationFactory):
-    """ Class that creates a toy population for use in the simple
+    """Class that creates a toy population for use in the simple
     python model.
+
     """
     @staticmethod
     @log_exceptions()
@@ -46,6 +47,7 @@ class ToyPopulationFactory(AbstractPopulationFactory):
         -------
         Population
             Population object with individuals distributed into households
+
         """
         # Unpack variables from input dictionary
         population_size = pop_params["population_size"]

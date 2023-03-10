@@ -10,6 +10,7 @@ from .personal_foi import PersonalInfection
 class PlaceInfection:
     """Class to calculate the infectiousness and susceptibility
     parameters for the force of infection parameter, within places.
+
     """
 
     @staticmethod

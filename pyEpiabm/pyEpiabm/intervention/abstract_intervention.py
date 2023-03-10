@@ -7,6 +7,7 @@ class AbstractIntervention:
     """Abstract class for Interventions.
     Detailed description of interventions can be found in github wiki:
     https://github.com/SABS-R3-Epidemiology/epiabm/wiki/Interventions.
+
     """
     def __init__(self, start_time, policy_duration, population,
                  case_threshold=0, **kwargs):
@@ -65,5 +66,6 @@ class AbstractIntervention:
 
     def turn_off(self):
         """Turn off intervention after intervention stops being active.
+
         """
         raise NotImplementedError

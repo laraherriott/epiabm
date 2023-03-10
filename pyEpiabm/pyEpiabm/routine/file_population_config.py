@@ -17,6 +17,7 @@ from pyEpiabm.utility import log_exceptions
 
 class FilePopulationFactory:
     """ Class that creates a population based on an input .csv file.
+
     """
     @staticmethod
     @log_exceptions()
@@ -179,6 +180,7 @@ class FilePopulationFactory:
             for grouping
         household_number : int
             Number of households to form
+
         """
         # Initialises another multinomial distribution
         q = [1 / household_number] * household_number

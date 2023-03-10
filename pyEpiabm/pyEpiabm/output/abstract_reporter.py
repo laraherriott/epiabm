@@ -8,6 +8,7 @@ import logging
 
 class AbstractReporter:
     """Abstract class for Data Reporters.
+
     """
 
     def __init__(self, folder: str, clear_folder: bool = False):

@@ -105,6 +105,7 @@ class Cell:
             Person's new infection status
         age_group : Age group index
             Person's associated age group
+
         """
         self.compartment_counter.report(old_status, new_status, age_group)
 
@@ -138,8 +139,7 @@ class Cell:
         self.location = loc
 
     def find_nearby_cells(self, other_cells):
-        '''
-        Helper function which takes in a given cell and the list of all cells
+        """Helper function which takes in a given cell and the list of all cells
         and generates a list of nearby cells which are
         closer than the cutoff for cross-cell infection.
 
@@ -154,7 +154,7 @@ class Cell:
         other_cells : typing.List[Cell]
             List of all cells except cell
 
-        '''
+        """
         cutoff = Parameters.instance().infection_radius
 
         for cell2 in other_cells:

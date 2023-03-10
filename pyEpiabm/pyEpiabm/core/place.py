@@ -126,8 +126,11 @@ class Place:
     def get_group_index(self, person):
         """Get the group of a person in the place.
 
-        :param person: Person associated with group
-        :type person: Person
+        Parameters
+        ----------
+        person: Person
+            Person associated with group
+
         """
         if person not in self.persons:
             raise KeyError("Person not found in this place")
@@ -143,9 +146,10 @@ class Place:
         workers at the restaurant will be present each timestep.
         Defaults to emptying the whole place.
 
-        :param person_groups: List of person_group
-            indicies to be removed
-        :type person_groups: list
+        Parameters
+        ----------
+        groups_to_empty: List
+            List of person_group indicies to be removed
 
         """
         if len(groups_to_empty) == 0:

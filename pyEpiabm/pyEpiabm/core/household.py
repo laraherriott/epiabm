@@ -14,6 +14,7 @@ class Household:
     together and share living spaces. This group will
     have a combined susceptibility and infectiousness
     different to that of the individuals.
+
     """
     def __init__(self, microcell, loc: typing.Tuple[float, float],
                  susceptibility=0, infectiousness=0):

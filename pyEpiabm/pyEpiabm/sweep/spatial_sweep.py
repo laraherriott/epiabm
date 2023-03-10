@@ -27,8 +27,7 @@ class SpatialSweep(AbstractSweep):
 
     """
     def __call__(self, time: float):
-        """
-        Given a population structure, loops over cells and generates
+        """Given a population structure, loops over cells and generates
         a random number of people to infect. Then decides which cells
         the infectees should be found in and considers whether an
         infection event occurs on individual and cell infectiousness

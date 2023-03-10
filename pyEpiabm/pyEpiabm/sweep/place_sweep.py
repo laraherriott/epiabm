@@ -19,8 +19,7 @@ class PlaceSweep(AbstractSweep):
 
     """
     def __call__(self, time: float):
-        """
-        Given a population structure with places, loops over infected
+        """Given a population structure with places, loops over infected
         members of the place and considers whether they infected other
         people present, based on individual and place infectiousness
         and susceptibility.

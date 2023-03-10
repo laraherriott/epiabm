@@ -23,6 +23,7 @@ class Simulation:
     """
     def __init__(self):
         """ Constructor
+
         """
         self.writers = []
 
@@ -216,7 +217,7 @@ class Simulation:
 
     @staticmethod
     def set_random_seed(seed):
-        """ Set random seed for all subsequent operations. Should be used
+        """Set random seed for all subsequent operations. Should be used
         before population configuration to control this process as well.
 
         Parameters
